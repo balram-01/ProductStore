@@ -6,14 +6,26 @@ import RenderItem from '../../components/RenderItem';
 import {useGetProductsQuery} from '../../services/api/products.api';
 import {useDispatch} from 'react-redux';
 import useProducts from './useProducts';
+import ProductSkeleton from './ProductsSkeleton';
 
 const Products = () => {
-const {products, isLoading, error} = useProducts();
-  
+  const {products, isLoading, error} = useProducts();
+  const skeletonArray = new Array(5).fill(null); // Create an array of length 20
+
   return (
     <>
+      {/* {skeletonArray.map((_, index) => (
+        <ProductSkeleton key={index} /> // Render MySkeletonComponent 20 times
+      ))} */}
       {/* <Text style={styles.text}>Popular Destinations</Text> */}
       <FlatList
+        ListEmptyComponent={
+          <>
+            {skeletonArray.map((_, index) => (
+        <ProductSkeleton key={index} /> // Render MySkeletonComponent 20 times
+      ))}
+          </>
+        }
         data={products}
         renderItem={({item, index}) => {
           return <RenderItem item={item} index={index} />;

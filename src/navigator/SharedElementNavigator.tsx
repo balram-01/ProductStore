@@ -2,7 +2,6 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import ProductDetail from '../screen/ProductDetail';
-import {Data} from '../data/data';
 import Products from '../screen/products/Products';
 import { Product } from '../features/ProductSlice';
 

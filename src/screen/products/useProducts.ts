@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import { Product, setProducts } from '../../features/ProductSlice';
 
 
-
 interface ProductsHookResult {
     products: Product[] | null;
     isLoading: boolean;
