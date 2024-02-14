@@ -1,8 +1,19 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+# Demo Images
+
+<p **align**="center">
+  <img src="./src/assets/demo/skeleton.jpg" width="350" title="loading skeleton">
+  <img src="./src/assets/demo/products.jpg" width="350" alt="products screen">
+   <img src="./src/assets/demo/products-searchbar.jpg" width="350" alt="products searchbar">
+    <img src="./src/assets/demo/product-laptop.jpg" width="350" alt="products details">
+     <img src="./src/assets/demo/product-details-searchbar.jpg" width="350" alt="products details searchbar">
+      <img src="./src/assets/demo/toast.jpg" width="350" alt="animated toast">
+</p>
+
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
