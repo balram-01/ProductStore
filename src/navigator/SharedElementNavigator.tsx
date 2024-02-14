@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import ProductDetail from '../screen/ProductDetail';
 import Products from '../screen/products/Products';
 import { Product } from '../features/ProductSlice';
+import Header from '../components/Header';
 
 export type SharedElementStackParamList = {
   Products: undefined;
@@ -16,7 +17,7 @@ const SharedElementNavigator = () => {
     // @ts-ignore
     <NavigationContainer>
       {/* @ts-ignore */}
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{header: <Header />}}>
         <Stack.Screen
           name="Products"
           component={Products}

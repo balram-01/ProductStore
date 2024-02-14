@@ -1,5 +1,5 @@
 import {Pressable, StyleSheet, Text, useWindowDimensions} from 'react-native';
-import React from 'react';
+import React, { memo } from 'react';
 import Animated, {FadeInDown} from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
@@ -15,7 +15,7 @@ const Button = () => {
         styles.container,
         {width: width * 0.9, marginBottom: inset.bottom},
       ]}
-      entering={FadeInDown.delay(1000)}
+      entering={FadeInDown.delay(600)}
       onPress={() => {
         console.log('BOOKING NOW');
       }}>
@@ -24,7 +24,7 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default memo( Button);
 
 const styles = StyleSheet.create({
   container: {

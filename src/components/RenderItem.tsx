@@ -38,7 +38,7 @@ const RenderItem = ({item, index}: Props) => {
             <StarRating
               maxStars={5}
               rating={item.rating}
-              onChange={()=>{}}
+              onChange={() => {}}
               starSize={19}
               starStyle={{flex: 1}}
               style={{width: 100, flexWrap: 'wrap', flexShrink: 1}}
@@ -50,12 +50,7 @@ const RenderItem = ({item, index}: Props) => {
           <View style={styles.priceContainer}>
             <View style={styles.priceRowContainer}>
               <Text style={styles.rupees}>₹</Text>
-              <Text style={styles.priceText}>
-                {getPriceAfterDiscount(
-                  item.price,
-                  item.discountPercentage,
-                ).toFixed()}
-              </Text>
+              <Text style={styles.priceText}>{item.price}</Text>
             </View>
 
             <Text style={styles.mrpText}>
@@ -73,12 +68,9 @@ const RenderItem = ({item, index}: Props) => {
                 styles.discountPercentageText
               }>{`(${item.discountPercentage.toFixed()}% off)`}</Text>
           </View>
-          <Pressable
-            style={styles.btn}>
-            <Text style={
-              styles.btnText
-            }>Buy Now</Text>
-            </Pressable>
+          <Pressable style={styles.btn}>
+            <Text style={styles.btnText}>Buy Now</Text>
+          </Pressable>
         </View>
       </Pressable>
     </Animated.View>

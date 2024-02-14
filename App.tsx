@@ -28,7 +28,6 @@ import SharedElementNavigator from './src/navigator/SharedElementNavigator';
 import Home from './src/screen/products/Products';
 import {Provider} from 'react-redux';
 import {store} from './src/store';
-
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -44,6 +43,7 @@ function App(): React.JSX.Element {
   return (
     <Provider store={store}>
       <SafeAreaView style={backgroundStyle}>
+        <StatusBar backgroundColor={'#00A8E1'} animated />
         <SharedElementNavigator />
       </SafeAreaView>
     </Provider>

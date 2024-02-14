@@ -7,6 +7,7 @@ import {useGetProductsQuery} from '../../services/api/products.api';
 import {useDispatch} from 'react-redux';
 import useProducts from './useProducts';
 import ProductSkeleton from './ProductsSkeleton';
+import Header from '../../components/Header';
 
 const Products = () => {
   const {products, isLoading, error} = useProducts();
@@ -18,6 +19,7 @@ const Products = () => {
         <ProductSkeleton key={index} /> // Render MySkeletonComponent 20 times
       ))} */}
       {/* <Text style={styles.text}>Popular Destinations</Text> */}
+      <Header/>
       <FlatList
         ListEmptyComponent={
           <>
