@@ -28,7 +28,7 @@ const Products = () => {
       ))}
           </>
         }
-        data={products}
+        data={products??[]}
         renderItem={({item, index}) => {
           return <RenderItem item={item} index={index} />;
         }}

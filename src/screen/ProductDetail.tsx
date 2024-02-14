@@ -6,6 +6,8 @@ import {
   Text,
   View,
   useWindowDimensions,
+  Share,
+  Pressable
 } from 'react-native';
 import React, {Fragment, useState} from 'react';
 import Animated, {FadeIn, FadeInDown} from 'react-native-reanimated';
@@ -39,6 +41,12 @@ const ProductDetail = ({route}: Props) => {
     setActiveIndex(index);
   };
 
+  const ShareProduct = () => {
+    Share.share({
+      title: `Check out ${item.category} on ProductStore`,
+      message: `Hey! Checkout ${item.title} on ProductStore ${item.description}`,
+    });
+  }
   return (
     <ScrollView style={{flex: 1}} contentContainerStyle={{flex: 1}}>
       <View style={styles.container}>
@@ -51,9 +59,9 @@ const ProductDetail = ({route}: Props) => {
               <View style={styles.upperDiscountIcon}>
                 <Text style={styles.upperDiscountText}>{`${item.discountPercentage.toFixed()}%\noff`}</Text>
               </View>
-              <View style={styles.shareIconWrapper}>
+              <Pressable style={styles.shareIconWrapper} onPress={ShareProduct}>
                 <Icon name="share-variant" size={24} color="black" />
-              </View>
+              </Pressable>
             </Animated.View>
 
             <ScrollView horizontal onScroll={handleScroll} pagingEnabled>

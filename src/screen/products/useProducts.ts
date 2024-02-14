@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useGetProductsQuery } from '../../services/api/products.api';
 import { useDispatch } from 'react-redux';
 import { Product, setProducts } from '../../features/ProductSlice';
-
+import { showErrorToast } from "../../components/Toast/src/utils/ToastUtils"
 
 interface ProductsHookResult {
     products: Product[] | null;
@@ -19,6 +19,9 @@ const useProducts = (): ProductsHookResult => {
 
     useEffect(() => {
         dispatch(setProducts(products))
+        if (error) {
+            showErrorToast('Error getting products data')
+        }
     }, [dispatch, products, error]);
 
     return { products, isLoading, error };

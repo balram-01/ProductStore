@@ -2,6 +2,7 @@ import {Pressable, StyleSheet, Text, useWindowDimensions} from 'react-native';
 import React, { memo } from 'react';
 import Animated, {FadeInDown} from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import { showSuccessToast } from './Toast/src/utils/ToastUtils';
 
 const Button = () => {
   const {width} = useWindowDimensions();
@@ -17,7 +18,7 @@ const Button = () => {
       ]}
       entering={FadeInDown.delay(600)}
       onPress={() => {
-        console.log('BOOKING NOW');
+        showSuccessToast('Product Buyed Successfully!')
       }}>
       <Text style={styles.text}>Buy Now</Text>
     </AnimatedPressable>

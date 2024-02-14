@@ -1,4 +1,4 @@
-package com.q2payproject
+package com.ProductStore
 
 import android.app.Application
 import com.facebook.react.PackageList

@@ -74,9 +74,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.q2payproject"
+    namespace "com.ProductStore"
     defaultConfig {
-        applicationId "com.q2payproject"
+        applicationId "com.ProductStore"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
