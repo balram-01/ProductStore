@@ -1,4 +1,9 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Demo Video
+
+<video controls width="600">
+  <source src="./src/assets/demo/video/video.mp4" type="video/mp4">
+</video>
 
 # Demo Images
 
@@ -9,6 +14,8 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
     <img src="./src/assets/demo/product-laptop.jpg" width="350" alt="products details">
      <img src="./src/assets/demo/product-details-searchbar.jpg" width="350" alt="products details searchbar">
       <img src="./src/assets/demo/toast.jpg" width="350" alt="animated toast">
+
+
 </p>
 
 # Getting Started
